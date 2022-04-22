@@ -1,10 +1,22 @@
+import React from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
-export default function Layout({ children }) {
+interface DefaultLayout {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: DefaultLayout) {
   return (
     <>
       <NavBar />
-      <div>{children}</div>
+      <main>{children}</main>
+      <Footer />
+      <style jsx>{`
+        main {
+          height: 100vh;
+        }
+      `}</style>
     </>
   );
 }

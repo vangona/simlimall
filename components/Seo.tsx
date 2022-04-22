@@ -1,9 +1,13 @@
 import Head from "next/head";
 
-export default function Seo({ title }) {
+interface SeoInfo {
+  title: string;
+}
+
+export default function Seo({ title }: SeoInfo) {
   return (
     <Head>
-      <title>{title} | Next Movies</title>
+      <title>{title} | 심리몰</title>
     </Head>
   );
 }

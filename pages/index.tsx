@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import Seo from "../components/Seo";
 
 const Home: NextPage = () => {
-  return <div className="container"></div>;
+  return (
+    <>
+      <Seo title="홈" />1
+    </>
+  );
 };
 
 export default Home;
