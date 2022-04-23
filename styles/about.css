@@ -1,0 +1,12 @@
+.about-main__article {
+  max-width: 1000px;
+}
+
+.about-main__article p {
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.img-wrapper {
+  width: 100%;
+}

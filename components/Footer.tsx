@@ -27,14 +27,16 @@ export default function Footer() {
         <div className="bottom-right">
           <div className="bottom-sns">
             <h5>sns</h5>
-            <a href="https://www.facebook.com/socreate.kr">
-              <FontAwesomeIcon icon={faFacebookSquare} />
-              <span>페이스북</span>
-            </a>
-            <a href="https://www.instagram.com/simlimall/">
-              <FontAwesomeIcon icon={faInstagram} />
-              <span>인스타그램</span>
-            </a>
+            <div>
+              <a href="https://www.facebook.com/socreate.kr">
+                <FontAwesomeIcon icon={faFacebookSquare} />
+                <span>페이스북</span>
+              </a>
+              <a href="https://www.instagram.com/simlimall/">
+                <FontAwesomeIcon icon={faInstagram} />
+                <span>인스타그램</span>
+              </a>
+            </div>
           </div>
           <div className="bottom-store">
             <h5>store</h5>
@@ -45,10 +47,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <style jsx>{`
         footer {
           width: 100%;
-          height: 300px;
           bottom: 0;
 
           display: flex;
@@ -56,6 +58,7 @@ export default function Footer() {
           align-items: center;
 
           font-size: 14px;
+          padding: 0 5vw;
         }
 
         footer > div {
@@ -64,24 +67,27 @@ export default function Footer() {
         }
 
         .top {
-          width: 100%;
+          width: 95vw;
           height: 50px;
-          border-top: 1px solid rgba(0, 0, 0, 0.3);
-          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
           justify-content: center;
+          color: rgba(0, 0, 0, 0.3);
         }
 
         .bottom {
           height: 100%;
-          width: 60%;
-          justify-content: space-between;
-          gap: 20px;
+          width: 100%;
+          max-width: 1000px;
+          justify-content: flex-start;
+          gap: 5vw;
+          padding: 1rem 0;
         }
 
         .bottom-center {
           width: 1px;
-          height: 80%;
-          background-color: rgba(0, 0, 0, 0.3);
+          min-height: 150px;
+          background-color: rgba(0, 0, 0, 0.1);
         }
 
         .bottom-left {
@@ -106,7 +112,12 @@ export default function Footer() {
         .bottom-right h5 {
           text-transform: uppercase;
           margin: 0 0 10px 0;
-          color: #ebc37e;
+          color: #f4b728;
+        }
+
+        .bottom-sns div {
+          display: flex;
+          gap: 10px;
         }
 
         .bottom-right a {

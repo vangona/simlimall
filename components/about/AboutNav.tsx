@@ -26,7 +26,7 @@ export default function AboutNav() {
           display: flex;
           gap: 20px;
           font-size: 1.1rem;
-          margin-bottom: 30px;
+          margin-bottom: 10px;
         }
 
         .active {

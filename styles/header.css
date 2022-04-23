@@ -1,0 +1,16 @@
+.header__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+}
+
+.header__article h2 {
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+}
+
+.header--about {
+  margin: 2rem 0 0 0;
+}

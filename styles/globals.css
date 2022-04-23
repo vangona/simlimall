@@ -13,3 +13,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.action-btn {
+  text-align: center;
+  width: 200px;
+  padding: 15px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  transition: 0.1s all linear;
+}
+
+.action-btn:hover {
+  cursor: pointer;
+  background-color: #f4b728;
+  color: white;
+}
+
+.line {
+  width: 10px;
+  height: 1px;
+  color: black;
+}

@@ -12,11 +12,6 @@ export default function Layout({ children }: DefaultLayout) {
       <NavBar />
       <main>{children}</main>
       <Footer />
-      <style jsx>{`
-        main {
-          height: 100vh;
-        }
-      `}</style>
     </>
   );
 }

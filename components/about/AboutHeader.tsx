@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeaderLayout from "../section/SectionHeaderLayout";
 import AboutNav from "./AboutNav";
 
 interface DefaultLayout {
@@ -8,23 +9,10 @@ interface DefaultLayout {
 export default function AboutHeader({ children }: DefaultLayout) {
   return (
     <>
-      <header>
+      <SectionHeaderLayout>
         <AboutNav />
         {children}
-      </header>
-      <style jsx>{`
-        header {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          background-color: #f7f7f7;
-          height: auto;
-
-          padding-top: 50px;
-        }
-      `}</style>
+      </SectionHeaderLayout>
     </>
   );
 }
