@@ -104,6 +104,7 @@ const Product: NextPage = () => {
       </article>
       <style jsx>{`
         .product-article {
+          max-width: 1000px;
           margin-top: 50px;
           display: grid;
           grid-template-rows: repeat(3, 1fr);

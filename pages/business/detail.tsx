@@ -28,11 +28,13 @@ const Detail: NextPage = () => {
         <div className="table">
           <div className="table-row">
             <div className="table-column">
-              <h5>Step01</h5>
+              <h5 className="step">Step01</h5>
               <h5>연구 및 개발</h5>
             </div>
             <div className="table-column">
-              <h5>생각을 창조(create) 하다.</h5>
+              <h5>
+                생각을 <span className="bold">창조(create)</span> 하다.
+              </h5>
               <span>- 심리학을 기반으로 한 연구와 개발</span>
               <span>- 심리학 전문가 컨설팅을 통한 전문성 강화</span>
               <span>- 심리 및 교육 현장과의 소통을 통한 실용성 강화</span>
@@ -40,11 +42,13 @@ const Detail: NextPage = () => {
           </div>
           <div className="table-row">
             <div className="table-column">
-              <h5>Step02</h5>
+              <h5 className="step">Step02</h5>
               <h5>제작</h5>
             </div>
             <div className="table-column">
-              <h5>생각을 제작(produce) 하다.</h5>
+              <h5>
+                생각을 <span className="bold">제작(produce)</span> 하다.
+              </h5>
               <span>- 개발된 심리도구 제작</span>
               <span>- 개발된 심리 교육 및 프로그램 교본 제작</span>
               <span>
@@ -55,37 +59,60 @@ const Detail: NextPage = () => {
           </div>
           <div className="table-row">
             <div className="table-column">
-              <h5>Step03</h5>
+              <h5 className="step">Step03</h5>
               <h5>상담 및 교육</h5>
             </div>
             <div className="table-column">
-              <h5>생각을 제공(service) 하다.</h5>
+              <h5>
+                생각을 <span className="bold">제공(service)</span> 하다.
+              </h5>
               <span>- 제작된 심리 도구 워크숍 제공</span>
               <span>- 제작된 심리 교육 및 프로그램 워크숍 제공</span>
               <span>- 개발된 심리 도구 및 프로그램을 통한 심리상담 제공</span>
             </div>
           </div>
         </div>
-        <hr />
       </article>
       <article className="business-detail__article">
         <h4>SIMLIMALL BUSINESS</h4>
         <h2>심리몰 연구 및 개발의 장점</h2>
         <div className="box-container">
           <div className="merit-description">
-            <div className="icon"></div>
+            <div className="icon">
+              <Image
+                src="http://simlimall.com/images/sub/bjIco01.png"
+                alt=""
+                width={"47px"}
+                height={"43px"}
+              />
+            </div>
             <h5>01</h5>
             <div className="line"></div>
             <p>심리상담 및 교육 현장과의 소통을 통한 실용적인 심리도구 개발</p>
           </div>
           <div className="merit-description">
-            <div className="icon"></div>
+            <div className="icon">
+              <Image
+                src="http://simlimall.com/images/sub/bjIco02.png"
+                alt=""
+                width={"47px"}
+                height={"43px"}
+              />
+            </div>
             <h5>02</h5>
             <div className="line"></div>
             <p>심리전문가의 컨설팅을 통한 전문적인 심리도구 개발</p>
           </div>
           <div className="merit-description">
-            <div className="icon"></div>
+            <div className="icon">
+              {" "}
+              <Image
+                src="http://simlimall.com/images/sub/bjIco03.png"
+                alt=""
+                width={"47px"}
+                height={"43px"}
+              />
+            </div>
             <h5>02</h5>
             <div className="line"></div>
             <p>워크숍을 통한 효율적인 심리도구 활용 가이드 제시</p>
@@ -93,7 +120,7 @@ const Detail: NextPage = () => {
         </div>
       </article>
       <Link href="#">
-        <a className="action-btn">상품 구매하기</a>
+        <a className="purchase-btn">상품으로 이동하기</a>
       </Link>
       <style jsx>{`
         .hero {
@@ -146,9 +173,15 @@ const Detail: NextPage = () => {
           gap: 20px;
         }
 
+        hr {
+          width: 100%;
+        }
+
         .table {
           display: grid;
           grid-template-rows: repeat(3, 1fr);
+          font-weight: 300;
+          line-height: 140%;
         }
 
         .table-row {
@@ -163,10 +196,24 @@ const Detail: NextPage = () => {
           justify-content: center;
         }
 
+        .table-column:first-child {
+          align-items: center;
+        }
+
         .table-column h5 {
           font-size: 1.1rem;
+          font-weight: 400;
           margin: 0;
           margin-bottom: 1rem;
+        }
+
+        .table-column .step {
+          font-size: 1rem;
+          color: rgba(0, 0, 0, 0.8);
+        }
+
+        .table-row {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         }
 
         .box-container {
@@ -180,13 +227,15 @@ const Detail: NextPage = () => {
           justify-content: center;
           align-items: center;
           padding: 3rem;
+          width: 30vw;
+          max-width: 300px;
           border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .merit-description h5 {
           font-size: 1.2rem;
           font-weight: 400;
-          margin-bottom: 5px;
+          margin: 1rem 0 5px 0;
         }
 
         .merit-description .line {
@@ -199,6 +248,26 @@ const Detail: NextPage = () => {
           text-align: center;
           word-break: keep-all;
           font-size: 0.9rem;
+          font-weight: 300;
+        }
+
+        .bold {
+          font-weight: 700;
+        }
+
+        .purchase-btn {
+          text-align: center;
+          width: 200px;
+          padding: 15px 20px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          transition: 0.1s all linear;
+          background-color: #f4b728;
+          color: white;
+        }
+
+        .purchase-btn:hover {
+          cursor: pointer;
+          transform: scale(1.05);
         }
       `}</style>
     </SectionMainLayout>

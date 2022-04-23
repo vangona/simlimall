@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function NavBar() {
   const router = useRouter();
@@ -52,7 +54,31 @@ export default function NavBar() {
             <a>구매하기</a>
           </Link>
         </div>
-        <button className="menu--mobile-toggle">메뉴</button>
+
+        <label htmlFor="menu-toggle" className="menu--mobile-toggle">
+          <FontAwesomeIcon icon={faBars} />
+        </label>
+        <input type="checkbox" id="menu-toggle" checked />
+
+        <div className="menu--mobile">
+          <Link href="/about/greeting">
+            <a className={router.pathname.includes("/about") ? "active" : ""}>
+              심리몰이란?
+            </a>
+          </Link>
+          <Link href="/business">
+            <a
+              className={router.pathname.includes("/business") ? "active" : ""}
+            >
+              사업소개
+            </a>
+          </Link>
+          <Link href="/product">
+            <a className={router.pathname.includes("/product") ? "active" : ""}>
+              제품소개
+            </a>
+          </Link>
+        </div>
       </nav>
       <style jsx>{`
         .link {
@@ -106,10 +132,6 @@ export default function NavBar() {
           color: #f4b728;
         }
 
-        .menu--mobile-toggle {
-          display: none;
-        }
-
         .menu-content--purchase {
           display: flex;
           width: 150px;
@@ -130,6 +152,30 @@ export default function NavBar() {
           height: 100%;
         }
 
+        .menu--mobile-toggle {
+          display: none;
+          font-size: 2rem;
+          transition: 0.1s all linear;
+        }
+
+        .menu--mobile-toggle:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+
+        .menu--mobile {
+          display: none;
+        }
+
+        #menu-toggle:checked .menu--mobile {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #menu-toggle {
+          display: none;
+        }
+
         @media (max-width: 800px) {
           .menu--mobile-toggle {
             display: flex;
@@ -137,6 +183,14 @@ export default function NavBar() {
 
           .menu-content {
             display: none;
+          }
+
+          .active {
+            all: unset;
+          }
+
+          .active:hover {
+            cursor: pointer;
           }
         }
       `}</style>

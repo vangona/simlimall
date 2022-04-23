@@ -4,7 +4,7 @@ import Seo from "../components/Seo";
 const Home: NextPage = () => {
   return (
     <>
-      <Seo title="홈" />1
+      <Seo title="홈" />
     </>
   );
 };

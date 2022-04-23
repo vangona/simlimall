@@ -15,24 +15,29 @@ const Greeting: NextPage = () => {
       </AboutHeader>
       <article className="about-main__article">
         <div className="description">
-          <p>
-            Simlimall은 단순히 도구를 만드는 곳이 아니라 생각과 가치를 실현하여
-            긍정적인 사회와 개인의 행복을 제공하기 위해 노력하고 있습니다.
-          </p>
-          <p>
+          <div>
+            <p>
+              Simlimall은 단순히 도구를 만드는 곳이 아니라 생각과 가치를
+              실현하여 긍정적인 사회와 개인의 행복을 제공하기 위해 노력하고
+              있습니다.
+            </p>
+          </div>
+          <div>
             Simrimall에서 제공되는 모든 서비스의 중심에는 사람이 있습니다.
             사람의 행복과 더 나은 삶을 위해 노력하는 회사가 될 것을
-            약속드립니다.
-          </p>
-          <p>Simlimall은 심리학 전문가들과 함께 합니다.</p>
-          <p>
+            약속드립니다. <br />
+            Simlimall은 심리학 전문가들과 함께 합니다.
+            <br />
             과학적이고 전문적인 지식, 윤리적 기준, 현장의 전문적 인 경험을
             바탕으로 신뢰할 수 있는 학문적인 서비스를 제공하겠습니다.
-          </p>
-          <p>
-            늘 처음과 같이 여러분과 함께 성장하는 Simlimall이 되겠습니다.
-            감사합니다.
-          </p>
+          </div>
+          <div>
+            {" "}
+            <p>
+              늘 처음과 같이 여러분과 함께 성장하는 Simlimall이 되겠습니다.
+              감사합니다.
+            </p>
+          </div>
         </div>
         <div className="img-wrapper">
           <Image
@@ -43,6 +48,12 @@ const Greeting: NextPage = () => {
           />
         </div>
       </article>
+      <style jsx>{`
+        .description {
+          word-break: keep-all;
+          line-height: 140%;
+        }
+      `}</style>
     </SectionMainLayout>
   );
 };

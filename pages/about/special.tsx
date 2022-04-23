@@ -30,6 +30,7 @@ const Special: NextPage = () => {
             alt=""
           />
           <div className="article-description">
+            <div className="number--big">01</div>
             <div className="article-line"></div>
             <h3>우리는 여러분의 노력을 믿습니다.</h3>
             <p>
@@ -47,6 +48,7 @@ const Special: NextPage = () => {
             alt=""
           />
           <div className="article-description">
+            <div className="number--big">02</div>
             <div className="article-line"></div>
             <h3>우리는 현장에서 해답을 얻습니다.</h3>
             <p>
@@ -63,6 +65,7 @@ const Special: NextPage = () => {
             alt=""
           />
           <div className="article-description">
+            <div className="number--big">03</div>
             <div className="article-line"></div>
             <h3>우리는 가치와 생각을 실현합니다.</h3>
             <p>
@@ -89,9 +92,21 @@ const Special: NextPage = () => {
 
         .section-article .article-description {
           display: flex;
+          position: relative;
           flex-direction: column;
           justify-content: center;
-          padding: 1rem 2rem;
+          padding: 2rem 3rem;
+          max-width: 500px;
+        }
+
+        .number--big {
+          top: 1rem;
+          right: 1rem;
+          position: absolute;
+          font-family: montserrat;
+          font-weight: bolder;
+          font-size: 72px;
+          color: rgb(247, 247, 247);
         }
 
         .article-line {
@@ -101,15 +116,21 @@ const Special: NextPage = () => {
         }
 
         .article-description h3 {
-          font-size: 18px;
+          font-size: 1.5rem;
           font-weight: 400;
         }
 
         .article-description p {
-          font-size: 14px;
+          font-size: 1rem;
           font-weight: 300;
           line-height: 140%;
           word-break: keep-all;
+        }
+
+        @media (max-width: 1200px) {
+          .number--big {
+            display: none;
+          }
         }
       `}</style>
     </SectionMainLayout>

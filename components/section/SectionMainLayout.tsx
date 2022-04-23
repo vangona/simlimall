@@ -13,6 +13,7 @@ export default function SectionMainLayout({ children }: DefaultLayout) {
           display: flex;
           flex-direction: column;
           align-items: center;
+          justify-content: center;
           padding: 0 5vw;
           margin-bottom: 10vmin;
           width: 100%;
