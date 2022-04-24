@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
@@ -10,18 +10,15 @@ export default function NavBar() {
 
   const router = useRouter();
   const onClickMenuToggle = () => {
-    const menuToggle = document.querySelector(".menu--mobile-toggle");
-    const mobileMenu = document.querySelector(".menu--mobile");
+    const body = document.body;
 
     if (menuState) {
-      mobileMenu?.classList.remove("show");
-      menuToggle?.classList.remove("unshow");
+      body.style.overflow = "auto";
+      setMenuState(!menuState);
     } else {
-      mobileMenu?.classList.add("show");
-      menuToggle?.classList.add("unshow");
+      body.style.overflow = "hidden";
+      setMenuState(!menuState);
     }
-
-    setMenuState(!menuState);
   };
 
   return (
@@ -73,29 +70,48 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <button onClick={onClickMenuToggle} className="menu--mobile-toggle">
-          <FontAwesomeIcon icon={faBars} />
-        </button>
-
-        <div className="menu--mobile">
-          <Link href="/about/greeting">
-            <a className={router.pathname.includes("/about") ? "active" : ""}>
-              심리몰이란?
-            </a>
-          </Link>
-          <Link href="/business">
-            <a
-              className={router.pathname.includes("/business") ? "active" : ""}
-            >
-              사업소개
-            </a>
-          </Link>
-          <Link href="/product">
-            <a className={router.pathname.includes("/product") ? "active" : ""}>
-              제품소개
-            </a>
-          </Link>
-        </div>
+        {menuState ? (
+          <div className="menu--mobile">
+            <div className="menu--mobile__dimmer"></div>
+            <div className="menu--mobile__content">
+              <button
+                onClick={onClickMenuToggle}
+                className="menu--mobile-toggle"
+              >
+                <FontAwesomeIcon icon={faX} />
+              </button>
+              <Link href="/about/greeting">
+                <a
+                  className={router.pathname.includes("/about") ? "active" : ""}
+                >
+                  심리몰이란?
+                </a>
+              </Link>
+              <Link href="/business">
+                <a
+                  className={
+                    router.pathname.includes("/business") ? "active" : ""
+                  }
+                >
+                  사업소개
+                </a>
+              </Link>
+              <Link href="/product">
+                <a
+                  className={
+                    router.pathname.includes("/product") ? "active" : ""
+                  }
+                >
+                  제품소개
+                </a>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <button onClick={onClickMenuToggle} className="menu--mobile-toggle">
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        )}
       </nav>
       <style jsx>{`
         .link {
@@ -183,7 +199,74 @@ export default function NavBar() {
         }
 
         .menu--mobile {
-          display: none;
+          position: fixed;
+          top: 0;
+          right: 0;
+          width: 300px;
+          height: 100vh;
+          width: 95vw;
+          height: 100vh;
+          z-index: 3;
+        }
+
+        .menu--mobile__dimmer {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.3);
+          z-index: 4;
+        }
+
+        @keyframes menuSlideIn {
+          from {
+            transform: translateX(0);
+          }
+
+          to {
+            transform: translateX(-300px);
+          }
+        }
+
+        .menu--mobile__content {
+          display: flex;
+          position: absolute;
+          flex-direction: column;
+          gap: 20px;
+          align-items: flex-start;
+          padding: 10px;
+
+          position: absolute;
+          top: 0;
+          right: -300px;
+          width: 300px;
+          height: 100vh;
+
+          background-color: white;
+          z-index: 5;
+
+          animation: menuSlideIn 0.5s ease-in-out forwards;
+        }
+
+        .menu--mobile__content a {
+          font-size: 1rem;
+          font-weight: 300;
+        }
+
+        .menu--mobile button {
+          font-size: 15px;
+          position: relative;
+          top: 15px;
+          right: -255px;
+        }
+
+        .menu--mobile__content *:not(:first-child) {
+          display: flex;
+          justify-content: flex-start;
+          width: 80%;
+          height: 50px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         }
 
         @media (max-width: 800px) {
@@ -202,14 +285,6 @@ export default function NavBar() {
           .active:hover {
             cursor: pointer;
           }
-        }
-
-        .show {
-          display: flex;
-        }
-
-        .unshow {
-          display: none;
         }
       `}</style>
     </header>
