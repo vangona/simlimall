@@ -3,9 +3,27 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 export default function NavBar() {
+  const [menuState, setMenuState] = useState<boolean>(false);
+
   const router = useRouter();
+  const onClickMenuToggle = () => {
+    const menuToggle = document.querySelector(".menu--mobile-toggle");
+    const mobileMenu = document.querySelector(".menu--mobile");
+
+    if (menuState) {
+      mobileMenu?.classList.remove("show");
+      menuToggle?.classList.remove("unshow");
+    } else {
+      mobileMenu?.classList.add("show");
+      menuToggle?.classList.add("unshow");
+    }
+
+    setMenuState(!menuState);
+  };
+
   return (
     <header>
       <nav className="menu">
@@ -55,10 +73,9 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <label htmlFor="menu-toggle" className="menu--mobile-toggle">
+        <button onClick={onClickMenuToggle} className="menu--mobile-toggle">
           <FontAwesomeIcon icon={faBars} />
-        </label>
-        <input type="checkbox" id="menu-toggle" checked />
+        </button>
 
         <div className="menu--mobile">
           <Link href="/about/greeting">
@@ -155,6 +172,8 @@ export default function NavBar() {
         .menu--mobile-toggle {
           display: none;
           font-size: 2rem;
+          background-color: transparent;
+          border: none;
           transition: 0.1s all linear;
         }
 
@@ -164,15 +183,6 @@ export default function NavBar() {
         }
 
         .menu--mobile {
-          display: none;
-        }
-
-        #menu-toggle:checked .menu--mobile {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #menu-toggle {
           display: none;
         }
 
@@ -192,6 +202,14 @@ export default function NavBar() {
           .active:hover {
             cursor: pointer;
           }
+        }
+
+        .show {
+          display: flex;
+        }
+
+        .unshow {
+          display: none;
         }
       `}</style>
     </header>

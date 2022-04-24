@@ -132,9 +132,22 @@ const Product: NextPage = () => {
         }
 
         .article-description p {
-          font-size: 0.9rem;
+          font-size: 1rem;
           font-weight: 200;
           line-height: 140%;
+        }
+
+        @media (max-width: 768px) {
+          .article-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .article-description {
+            min-height: 250px;
+            order: -1;
+            padding: 3rem;
+          }
         }
       `}</style>
     </SectionMainLayout>

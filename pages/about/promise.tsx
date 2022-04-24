@@ -11,12 +11,14 @@ const Promise: NextPage = () => {
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰의 약속</h2>
-          <div>
+          <div className="img-wrapper">
             <Image
               src="http://simlimall.com/images/sub/promiseTilteImg.png"
-              alt=""
               width={"1803px"}
               height={"650px"}
+              layout="responsive"
+              objectFit="cover"
+              alt=""
             />
           </div>
         </article>
@@ -28,7 +30,6 @@ const Promise: NextPage = () => {
             <h5>심리몰의 핵심가치</h5>
           </div>
           <div className="img-wrapper">
-            {" "}
             <Image
               src="http://simlimall.com/images/sub/valueImg.png"
               width={"558px"}
@@ -101,7 +102,7 @@ const Promise: NextPage = () => {
           gap: 0;
         }
 
-        .img-wrapper {
+        section article .img-wrapper {
           max-width: 800px;
         }
 

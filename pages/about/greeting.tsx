@@ -32,7 +32,6 @@ const Greeting: NextPage = () => {
             바탕으로 신뢰할 수 있는 학문적인 서비스를 제공하겠습니다.
           </div>
           <div>
-            {" "}
             <p>
               늘 처음과 같이 여러분과 함께 성장하는 Simlimall이 되겠습니다.
               감사합니다.
@@ -49,7 +48,8 @@ const Greeting: NextPage = () => {
         </div>
       </article>
       <style jsx>{`
-        .description {
+        .description div {
+          font-size: 1.1rem;
           word-break: keep-all;
           line-height: 140%;
         }

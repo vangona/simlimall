@@ -17,6 +17,8 @@ const Special: NextPage = () => {
               alt=""
               width={"1803px"}
               height={"650px"}
+              layout="responsive"
+              objectFit="cover"
             />
           </div>
         </article>
@@ -77,6 +79,7 @@ const Special: NextPage = () => {
       </article>
       <style jsx>{`
         .section-article {
+          margin-top: 3rem;
           display: grid;
           grid-template-rows: repeat(3, 1fr);
         }
@@ -125,6 +128,17 @@ const Special: NextPage = () => {
           font-weight: 300;
           line-height: 140%;
           word-break: keep-all;
+        }
+
+        @media (max-width: 768px) {
+          .section-article .article-row {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .section-article div:nth-child(odd) div {
+            order: -1;
+          }
         }
 
         @media (max-width: 1200px) {
