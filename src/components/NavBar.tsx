@@ -89,7 +89,11 @@ export default function NavBar() {
                 <FontAwesomeIcon icon={faX} />
               </button>
               <div className="menu-content--subcontent">
-                심리몰이란?
+                <Link href="/">
+                  <a className={router.pathname === "/" ? "active" : ""}>
+                    심리몰이란?
+                  </a>
+                </Link>
                 <div className="subcontent__content">
                   <Link href="/about/greeting">
                     <a

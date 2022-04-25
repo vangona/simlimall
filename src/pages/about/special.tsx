@@ -29,7 +29,7 @@ const Special: NextPage = () => {
             <div className="linebox"></div>
             <div className="img-wrapper">
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialTitleImg.png"
+                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialTitleImg.jpg"
                 alt=""
                 width={"1803px"}
                 height={"650px"}

@@ -39,6 +39,10 @@ const Greeting: NextPage = () => {
           </div>
         </div>
         <div className="img-wrapper">
+          <div className="img-upper">
+            <span>심리몰 임직원 일동.</span>
+            <div className="line--portrait"></div>
+          </div>
           <Image
             src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/greetingTitleImg.png"
             alt=""
@@ -48,10 +52,36 @@ const Greeting: NextPage = () => {
         </div>
       </article>
       <style jsx>{`
+        .description {
+          padding: 30px 0;
+        }
+
         .description div {
           font-size: 1.1rem;
           word-break: keep-all;
-          line-height: 140%;
+          line-height: 160%;
+        }
+
+        .img-wrapper {
+          margin-top: 2rem;
+          position: relative;
+        }
+
+        .img-upper {
+          display: flex;
+          position: absolute;
+          top: -2rem;
+          right: 2rem;
+          gap: 2rem;
+          font-size: 1.2rem;
+          z-index: 9;
+        }
+
+        .line--portrait {
+          width: 0.5rem;
+          height: 8rem;
+          background-color: #f1ba27;
+          transform: translateY(-2rem);
         }
       `}</style>
     </SectionMainLayout>
