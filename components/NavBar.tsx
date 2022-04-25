@@ -11,12 +11,17 @@ export default function NavBar() {
   const router = useRouter();
   const onClickMenuToggle = () => {
     const body = document.body;
+    const menuContent = document.querySelector(".menu--mobile__content");
 
     if (menuState) {
-      body.style.overflow = "auto";
-      setMenuState(!menuState);
+      menuContent?.classList.add("close");
+      setTimeout(() => {
+        body.style.overflow = "auto";
+        setMenuState(!menuState);
+      }, 300);
     } else {
       body.style.overflow = "hidden";
+      menuContent?.classList.remove("close");
       setMenuState(!menuState);
     }
   };
@@ -30,8 +35,8 @@ export default function NavBar() {
               <a>
                 <Image
                   src="http://simlimall.com/images/logo.png"
-                  width={"180px"}
-                  height={"70px"}
+                  width={"140px"}
+                  height={"50px"}
                   quality={"100"}
                   alt=""
                 />
@@ -72,7 +77,10 @@ export default function NavBar() {
 
         {menuState ? (
           <div className="menu--mobile">
-            <div className="menu--mobile__dimmer"></div>
+            <div
+              onClick={onClickMenuToggle}
+              className="menu--mobile__dimmer"
+            ></div>
             <div className="menu--mobile__content">
               <button
                 onClick={onClickMenuToggle}
@@ -80,31 +88,65 @@ export default function NavBar() {
               >
                 <FontAwesomeIcon icon={faX} />
               </button>
-              <Link href="/about/greeting">
-                <a
-                  className={router.pathname.includes("/about") ? "active" : ""}
-                >
-                  심리몰이란?
-                </a>
-              </Link>
-              <Link href="/business">
-                <a
-                  className={
-                    router.pathname.includes("/business") ? "active" : ""
-                  }
-                >
-                  사업소개
-                </a>
-              </Link>
-              <Link href="/product">
-                <a
-                  className={
-                    router.pathname.includes("/product") ? "active" : ""
-                  }
-                >
-                  제품소개
-                </a>
-              </Link>
+              <div className="menu-content--subcontent">
+                심리몰이란?
+                <div className="subcontent__content">
+                  <Link href="/about/greeting">
+                    <a
+                      className={
+                        router.pathname.includes("/about") ? "active" : ""
+                      }
+                    >
+                      심리몰 인삿말
+                    </a>
+                  </Link>
+                  <Link href="/about/promise">
+                    <a
+                      className={
+                        router.pathname.includes("/about") ? "active" : ""
+                      }
+                    >
+                      심리몰의 약속
+                    </a>
+                  </Link>
+                  <Link href="/about/special">
+                    <a
+                      className={
+                        router.pathname.includes("/about") ? "active" : ""
+                      }
+                    >
+                      심리몰이 특별한 이유
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="menu-content--subcontent">
+                <Link href="/business">
+                  <a
+                    className={
+                      router.pathname.includes("/business") ? "active" : ""
+                    }
+                  >
+                    사업소개
+                  </a>
+                </Link>
+              </div>
+              <div className="menu-content--subcontent">
+                <Link href="/product">
+                  <a
+                    className={
+                      router.pathname.includes("/product") ? "active" : ""
+                    }
+                  >
+                    제품소개
+                  </a>
+                </Link>
+              </div>
+              <div className="menu-content menu-content--purchase">
+                <Link href="#">
+                  <a>구매하기</a>
+                </Link>
+              </div>
             </div>
           </div>
         ) : (
@@ -120,6 +162,10 @@ export default function NavBar() {
 
         header {
           display: flex;
+          position: fixed;
+          top: 0;
+          background-color: white;
+          z-index: 99;
           width: 100%;
           height: 100px;
           justify-content: center;
@@ -147,6 +193,7 @@ export default function NavBar() {
         }
 
         .menu-logo {
+          height: 80%;
           margin-right: 2rem;
         }
 
@@ -229,13 +276,22 @@ export default function NavBar() {
           }
         }
 
+        @keyframes menuSlideOut {
+          from {
+            transform: translateX(-300px);
+          }
+
+          to {
+            transform: translateX(0);
+          }
+        }
+
         .menu--mobile__content {
           display: flex;
-          position: absolute;
           flex-direction: column;
-          gap: 20px;
+          gap: 50px;
           align-items: flex-start;
-          padding: 10px;
+          padding: 10px 30px;
 
           position: absolute;
           top: 0;
@@ -243,33 +299,82 @@ export default function NavBar() {
           width: 300px;
           height: 100vh;
 
+          font-size: 1rem;
+          font-weight: 300;
           background-color: white;
           z-index: 5;
 
-          animation: menuSlideIn 0.5s ease-in-out forwards;
+          animation: menuSlideIn 0.3s ease-in-out forwards;
         }
 
         .menu--mobile__content a {
           font-size: 1rem;
           font-weight: 300;
+          padding-bottom: 5px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          transition: 0.3s all linear;
+        }
+
+        .menu--mobile__content a:hover {
+          transform: scale(1.03);
         }
 
         .menu--mobile button {
           font-size: 15px;
           position: relative;
           top: 15px;
-          right: -255px;
+          right: -230px;
         }
 
-        .menu--mobile__content *:not(:first-child) {
+        .close {
+          animation: menuSlideOut 0.3s ease-in-out forwards;
+        }
+
+        .menu-content--subcontent {
           display: flex;
-          justify-content: flex-start;
-          width: 80%;
-          height: 50px;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          align-items: flex-start;
+          font-size: 1.2rem;
+          font-weight: 400;
         }
 
-        @media (max-width: 800px) {
+        .menu-content--subcontent > a {
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+
+        .subcontent__content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          align-items: flex-end;
+          margin-top: 30px;
+        }
+
+        .menu--mobile .menu-content--purchase {
+          display: flex;
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+          width: 120px;
+        }
+
+        @media (max-width: 768px) {
+          header {
+            height: 80px;
+          }
+
+          .menu-section--left {
+            height: 100%;
+          }
+
+          .menu-section--left * {
+            height: 100%;
+          }
+
           .menu--mobile-toggle {
             display: flex;
           }

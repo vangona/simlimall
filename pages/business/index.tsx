@@ -12,13 +12,25 @@ const Business: NextPage = () => {
       <SectionHeaderLayout>
         <article className="header__article">
           <h2>사업 소개</h2>
-          <div className="img-wrapper">
-            <Image
-              src="http://simlimall.com/images/sub/businessTilteImg.jpg"
-              alt=""
-              width={"1803px"}
-              height={"650px"}
-            />
+          <div className="header__hero">
+            <div className="hero-description">
+              <div className="hero-line"></div>
+              <h3>Simlimall Business</h3>
+              <div>심리몰을 만나고 '가치'를 배웠습니다.</div>
+              <p>고객님이 항상 성장할 수 있는 그 날까지 정성을 다하겠습니다.</p>
+              <div className="hero-line"></div>
+            </div>
+            <div className="linebox"></div>
+            <div className="img-wrapper">
+              <Image
+                src="http://simlimall.com/images/sub/specialTilteImg.jpg"
+                alt=""
+                width={"1803px"}
+                height={"650px"}
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </article>
       </SectionHeaderLayout>
@@ -100,6 +112,18 @@ const Business: NextPage = () => {
           background-color: black;
           height: 2px;
           width: 25px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          .article-main {
+            flex-direction: column;
+          }
+
+          .article-column:not(:last-child) {
+            padding: 0 0 2rem 0;
+            border-right: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
         }
       `}</style>
     </SectionMainLayout>

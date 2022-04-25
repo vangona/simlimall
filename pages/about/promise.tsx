@@ -11,15 +11,25 @@ const Promise: NextPage = () => {
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰의 약속</h2>
-          <div className="img-wrapper">
-            <Image
-              src="http://simlimall.com/images/sub/promiseTilteImg.png"
-              width={"1803px"}
-              height={"650px"}
-              layout="responsive"
-              objectFit="cover"
-              alt=""
-            />
+          <div className="header__hero">
+            <div className="hero-description">
+              <div className="hero-line"></div>
+              <h3>Simlimall Promise</h3>
+              <div>심리몰은 '행복'을 약속합니다.</div>
+              <p>건강한 사회와 개인의 행복한 삶을 위해 정성을 다하겠습니다.</p>
+              <div className="hero-line"></div>
+            </div>
+            <div className="linebox"></div>
+            <div className="img-wrapper">
+              <Image
+                src="http://simlimall.com/images/sub/promiseTilteImg.png"
+                width={"1803px"}
+                height={"650px"}
+                layout="responsive"
+                objectFit="cover"
+                alt=""
+              />
+            </div>
           </div>
         </article>
       </AboutHeader>
@@ -81,6 +91,9 @@ const Promise: NextPage = () => {
           justify-content: center;
           align-items: center;
           gap: 2rem;
+          padding: 0 1rem;
+          text-align: center;
+          line-height: 160%;
         }
 
         .title h4 {
@@ -91,7 +104,7 @@ const Promise: NextPage = () => {
         }
 
         .title h5 {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           font-weight: 400;
           margin: 0;
         }

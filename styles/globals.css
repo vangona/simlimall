@@ -15,6 +15,10 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  margin-top: 100px;
+}
+
 .action-btn {
   text-align: center;
   width: 200px;
@@ -39,6 +43,10 @@ a {
 @media screen and (max-width: 768px) {
   html {
     font-size: 12px;
+  }
+
+  main {
+    margin-top: 80px;
   }
 }
 

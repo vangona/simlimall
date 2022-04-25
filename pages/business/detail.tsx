@@ -3,15 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionHero from "../../components/section/SectionHero";
 import SectionMainLayout from "../../components/section/SectionMainLayout";
+import Seo from "../../components/Seo";
 
 const Detail: NextPage = () => {
   return (
     <SectionMainLayout>
+      <Seo title="사업 소개" />
       <SectionHero>
         <div className="hero">
           <h3>Simlimall Business</h3>
           <h4>심리몰 연구 및 개발</h4>
-          <div className="line"></div>
+          <div className="hero-line"></div>
           <span>인생의 모든 순간이 특별해지는 아름다운 변화</span>
         </div>
       </SectionHero>
@@ -140,10 +142,6 @@ const Detail: NextPage = () => {
           background-image: url("http://simlimall.com/images/sub/businessTitle.jpg");
         }
 
-        .hero:hover {
-          color: rgba(255, 255, 255, 0.8);
-        }
-
         .hero h3 {
           font-size: 2rem;
         }
@@ -157,7 +155,7 @@ const Detail: NextPage = () => {
           font-size: 1.2rem;
         }
 
-        .hero .line {
+        .hero .hero-line {
           width: 100px;
           height: 1px;
           background-color: white;
@@ -169,7 +167,7 @@ const Detail: NextPage = () => {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          margin-bottom: 50px;
+          margin: 100px 0;
           gap: 20px;
         }
 
@@ -210,6 +208,11 @@ const Detail: NextPage = () => {
         .table-column .step {
           font-size: 1rem;
           color: rgba(0, 0, 0, 0.8);
+        }
+
+        .table-column span {
+          font-size: 1.1rem;
+          margin-bottom: 5px;
         }
 
         .table-row {
@@ -268,6 +271,33 @@ const Detail: NextPage = () => {
         .purchase-btn:hover {
           cursor: pointer;
           transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+          .table-row {
+            grid-template-columns: none;
+            text-align: center;
+          }
+
+          .business-detail__article {
+            width: 100%;
+          }
+
+          .box-container {
+            flex-direction: column;
+            width: 100%;
+          }
+
+          .merit-description {
+            width: 100%;
+            max-width: none;
+          }
+        }
+
+        @media screen and (max-width: 1024px) {
+          .business-detail__article {
+            margin-top: 0;
+          }
         }
       `}</style>
     </SectionMainLayout>

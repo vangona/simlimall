@@ -14,8 +14,8 @@ export default function Footer() {
         <div className="bottom-left">
           <Image
             src="http://simlimall.com/images/footLogo.png"
-            width={"90px"}
-            height={"81px"}
+            width={"80px"}
+            height={"70px"}
             alt=""
           />
           <div className="description">
@@ -57,7 +57,7 @@ export default function Footer() {
           flex-direction: column;
           align-items: center;
 
-          font-size: 14px;
+          font-size: 0.8rem;
           padding: 0 5vw;
         }
 
@@ -125,6 +125,28 @@ export default function Footer() {
           margin-bottom: 5px;
           align-items: center;
           gap: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+          footer .bottom {
+            flex-direction: column;
+          }
+
+          .bottom-left {
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;s
+          }
+
+          .bottom-center {
+            width: 100%;
+            min-height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+
+          .bottom-right {
+            flex-direction: row;
+          }
         }
       `}</style>
     </footer>

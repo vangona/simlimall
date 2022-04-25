@@ -11,13 +11,25 @@ const Product: NextPage = () => {
       <SectionHeaderLayout>
         <article className="header__article">
           <h2>제품 소개</h2>
-          <div className="img-wrapper">
-            <Image
-              src="http://simlimall.com/images/sub/productTilteImg.jpg"
-              alt=""
-              width={"1803px"}
-              height={"650px"}
-            />
+          <div className="header__hero">
+            <div className="hero-description">
+              <div className="hero-line"></div>
+              <h3>Simlimall Product</h3>
+              <div>심리몰을 만나고 '행복'을 배웠습니다.</div>
+              <p>고객님이 항상 웃을 수 있는 그 날까지 정성을 다하겠습니다.</p>
+              <div className="hero-line"></div>
+            </div>
+            <div className="linebox"></div>
+            <div className="img-wrapper">
+              <Image
+                src="http://simlimall.com/images/sub/productTilteImg.jpg"
+                width={"1803px"}
+                height={"650px"}
+                layout="responsive"
+                objectFit="cover"
+                alt=""
+              />
+            </div>
           </div>
         </article>
       </SectionHeaderLayout>
@@ -108,6 +120,12 @@ const Product: NextPage = () => {
           margin-top: 50px;
           display: grid;
           grid-template-rows: repeat(3, 1fr);
+        }
+
+        .product-article .img-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .article-row {

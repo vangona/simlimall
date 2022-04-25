@@ -23,7 +23,10 @@ export default function AboutNav() {
       </Link>
       <style jsx>{`
         nav {
+          width: 100%;
           display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
           gap: 20px;
           font-size: 1.1rem;
           margin-bottom: 10px;

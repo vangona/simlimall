@@ -48,10 +48,13 @@ const Greeting: NextPage = () => {
         </div>
       </article>
       <style jsx>{`
+        .description {
+          padding: 30px 0;
+        }
         .description div {
           font-size: 1.1rem;
           word-break: keep-all;
-          line-height: 140%;
+          line-height: 160%;
         }
       `}</style>
     </SectionMainLayout>

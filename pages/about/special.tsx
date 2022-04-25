@@ -11,15 +11,32 @@ const Special: NextPage = () => {
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰이 특별한 이유</h2>
-          <div className="img-wrapper">
-            <Image
-              src="http://simlimall.com/images/sub/specialTilteImg.jpg"
-              alt=""
-              width={"1803px"}
-              height={"650px"}
-              layout="responsive"
-              objectFit="cover"
-            />
+          <div className="header__hero">
+            <div className="hero-description">
+              <div className="hero-line"></div>
+              <h3>Simlimall Special</h3>
+              <div>
+                Simlimall은 심리학을 기반으로 사회와 개인의 삶을 지원하는데
+                전념하고 있습니다. 우리의 필요와 아이디어를 현실에서 만나보세요.
+              </div>
+              <p>
+                밝은 내일과 긍정적인 미래를 위해 여러분의 필요에 귀 기울이고
+                여러분의 능력과 노력을 충분히 발휘할 수 있도록 지원하여 아름다운
+                사회의 개인의 행복을 만들어갑니다.
+              </p>
+              <div className="hero-line"></div>
+            </div>
+            <div className="linebox"></div>
+            <div className="img-wrapper">
+              <Image
+                src="http://simlimall.com/images/sub/specialTilteImg.jpg"
+                alt=""
+                width={"1803px"}
+                height={"650px"}
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </article>
       </AboutHeader>
