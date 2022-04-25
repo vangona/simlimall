@@ -22,7 +22,7 @@ const Product: NextPage = () => {
             <div className="linebox"></div>
             <div className="img-wrapper">
               <Image
-                src="http://simlimall.com/images/sub/productTilteImg.jpg"
+                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/product/productTilteImg.jpg"
                 width={"1803px"}
                 height={"650px"}
                 layout="responsive"
@@ -37,7 +37,7 @@ const Product: NextPage = () => {
         <div className="article-row">
           <div className="img-wrapper">
             <Image
-              src="http://simlimall.com/images/sub/proThum01.jpg"
+              src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/product/proThum01.jpg"
               alt=""
               width={"590px"}
               height={"380px"}
@@ -58,7 +58,7 @@ const Product: NextPage = () => {
         <div className="article-row">
           <div className="img-wrapper">
             <Image
-              src="http://simlimall.com/images/sub/proThum02.jpg"
+              src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/product/proThum02.jpg"
               alt=""
               width={"590px"}
               height={"380px"}
@@ -77,7 +77,7 @@ const Product: NextPage = () => {
         <div className="article-row">
           <div className="img-wrapper">
             <Image
-              src="http://simlimall.com/images/sub/proThum03.jpg"
+              src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/product/proThum03.jpg"
               alt=""
               width={"590px"}
               height={"380px"}
@@ -98,7 +98,7 @@ const Product: NextPage = () => {
         <div className="article-row">
           <div className="img-wrapper">
             <Image
-              src="http://simlimall.com/images/sub/proThum05.jpg"
+              src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/product/proThum05.jpg"
               alt=""
               width={"590px"}
               height={"380px"}

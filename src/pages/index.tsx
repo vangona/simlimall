@@ -39,7 +39,12 @@ const Greeting: NextPage = () => {
           </div>
         </div>
         <div className="img-wrapper">
-          <Image src="" alt="" width={"1803px"} height={"650px"} />
+          <Image
+            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/greetingTitleImg.png"
+            alt=""
+            width={"1803px"}
+            height={"650px"}
+          />
         </div>
       </article>
       <style jsx>{`

@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="bottom">
         <div className="bottom-left">
           <Image
-            src="http://simlimall.com/images/footLogo.png"
+            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/logo-column.png"
             width={"80px"}
             height={"70px"}
             alt=""
