@@ -16,7 +16,7 @@ const Business: NextPage = () => {
             <div className="hero-description">
               <div className="hero-line"></div>
               <h3>Simlimall Business</h3>
-              <div>심리몰을 만나고 '가치'를 배웠습니다.</div>
+              <div>심리몰을 만나고 &#39;가치&#39;를 배웠습니다.</div>
               <p>고객님이 항상 성장할 수 있는 그 날까지 정성을 다하겠습니다.</p>
               <div className="hero-line"></div>
             </div>

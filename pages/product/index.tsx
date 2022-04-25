@@ -15,7 +15,7 @@ const Product: NextPage = () => {
             <div className="hero-description">
               <div className="hero-line"></div>
               <h3>Simlimall Product</h3>
-              <div>심리몰을 만나고 '행복'을 배웠습니다.</div>
+              <div>심리몰을 만나고 &#39;행복&#39;을 배웠습니다.</div>
               <p>고객님이 항상 웃을 수 있는 그 날까지 정성을 다하겠습니다.</p>
               <div className="hero-line"></div>
             </div>

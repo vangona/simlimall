@@ -15,7 +15,7 @@ const Promise: NextPage = () => {
             <div className="hero-description">
               <div className="hero-line"></div>
               <h3>Simlimall Promise</h3>
-              <div>심리몰은 '행복'을 약속합니다.</div>
+              <div>심리몰은 &#39;행복&#39;을 약속합니다.</div>
               <p>건강한 사회와 개인의 행복한 삶을 위해 정성을 다하겠습니다.</p>
               <div className="hero-line"></div>
             </div>
