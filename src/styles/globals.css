@@ -1,3 +1,7 @@
+@import "normalize.css";
+@import "header.css";
+@import "about.css";
+
 html,
 body {
   font-size: 18px;

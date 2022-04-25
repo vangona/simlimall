@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
+const withImages = require("next-images");
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["simlimall.com"],
+    loader: "akamai",
+    path: "/",
   },
 };
 
 module.exports = nextConfig;
+module.exports = withImages();
