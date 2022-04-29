@@ -11,6 +11,7 @@ export default function Seo({ title, description }: SeoInfo) {
     <NextSeo
       title={`${title} | 심리몰`}
       description={description}
+      canonical="https://simlimall.netlify.app/"
       openGraph={{
         type: "website",
         locale: "ko_KR",
