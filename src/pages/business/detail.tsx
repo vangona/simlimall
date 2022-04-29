@@ -8,13 +8,16 @@ import Seo from "../../components/Seo";
 const Detail: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="사업 소개" />
+      <Seo
+        title="심리몰 연구 및 개발"
+        description="심리몰은 최선을 다합니다."
+      />
       <SectionHero>
         <div className="hero">
           <h3>Simlimall Business</h3>
           <h4>심리몰 연구 및 개발</h4>
           <div className="hero-line"></div>
-          <span>인생의 모든 순간이 특별해지는 아름다운 변화</span>
+          <span>인생의 모든 순간이 특별해지는 심리적 성장</span>
         </div>
       </SectionHero>
       <article className="business-detail__article">

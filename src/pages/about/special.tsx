@@ -7,7 +7,10 @@ import Seo from "../../components/Seo";
 const Special: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="심리몰이 특별한 이유" />
+      <Seo
+        title="심리몰이 특별한 이유"
+        description="Simlimall은 심리학을 기반으로 사회와 개인의 삶을 지원하는데 전념하고 있습니다. 우리의 필요와 아이디어를 현실에서 만나보세요."
+      />
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰이 특별한 이유</h2>

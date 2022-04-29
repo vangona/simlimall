@@ -7,7 +7,10 @@ import Seo from "../../components/Seo";
 const Promise: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="심리몰의 약속" />
+      <Seo
+        title="심리몰의 약속"
+        description="심리몰은 '행복'을 약속합니다.건강한 사회와 개인의 행복한 삶을 위해 정성을 다하겠습니다."
+      />
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰의 약속</h2>

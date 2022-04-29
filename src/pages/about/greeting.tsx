@@ -7,7 +7,10 @@ import Seo from "../../components/Seo";
 const Greeting: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="심리몰 인삿말" />
+      <Seo
+        title="심리몰 인삿말"
+        description="Simlimall은 단순히 도구를 만드는 곳이 아니라 생각과 가치를 실현하여 긍정적인 사회와 개인의 행복을 제공하기 위해 노력하고 있습니다."
+      />
       <AboutHeader>
         <article className="header__article header--about">
           <h2>심리몰 인삿말</h2>

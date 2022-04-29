@@ -8,7 +8,10 @@ import Seo from "../../components/Seo";
 const Business: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="사업 소개" />
+      <Seo
+        title="사업 소개"
+        description="심리몰은 고객님과의 성장을 위해 연구 및 개발, 심리교구 제작, 상담 및 교육을 제공합니다."
+      />
       <SectionHeaderLayout>
         <article className="header__article">
           <h2>사업 소개</h2>
@@ -16,8 +19,8 @@ const Business: NextPage = () => {
             <div className="hero-description">
               <div className="hero-line"></div>
               <h3>Simlimall Business</h3>
-              <div>심리몰을 만나고 &#39;가치&#39;를 배웠습니다.</div>
-              <p>고객님이 항상 성장할 수 있는 그 날까지 정성을 다하겠습니다.</p>
+              <div>심리몰은 &#39;가치&#39;를 제공합니다.</div>
+              <p>고객님과 함께 성장할 수 있는 그 날까지 정성을 다하겠습니다.</p>
               <div className="hero-line"></div>
             </div>
             <div className="linebox"></div>
