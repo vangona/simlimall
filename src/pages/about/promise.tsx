@@ -22,7 +22,7 @@ const Promise: NextPage = () => {
             <div className="linebox"></div>
             <div className="img-wrapper">
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/promiseTitleImg.png"
+                src="about/promiseTitleImg.png"
                 width={"1803px"}
                 height={"650px"}
                 layout="responsive"
@@ -41,7 +41,7 @@ const Promise: NextPage = () => {
           </div>
           <div className="img-wrapper">
             <Image
-              src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/valueImg.png"
+              src="about/valueImg.png"
               width={"558px"}
               height={"275px"}
               layout="responsive"

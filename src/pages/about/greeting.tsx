@@ -44,7 +44,7 @@ const Greeting: NextPage = () => {
             <div className="line--portrait"></div>
           </div>
           <Image
-            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/greetingTitleImg.png"
+            src="about/greetingTitleImg.png"
             alt=""
             width={"1803px"}
             height={"650px"}

@@ -29,7 +29,7 @@ const Special: NextPage = () => {
             <div className="linebox"></div>
             <div className="img-wrapper">
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialTitleImg.jpg"
+                src="about/specialTitleImg.jpg"
                 alt=""
                 width={"1803px"}
                 height={"650px"}
@@ -43,7 +43,7 @@ const Special: NextPage = () => {
       <article className="section-article">
         <div className="article-row">
           <Image
-            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialThum01.jpg"
+            src="about/specialThum01.jpg"
             width={"558px"}
             height={"369px"}
             alt=""
@@ -61,7 +61,7 @@ const Special: NextPage = () => {
         </div>
         <div className="article-row">
           <Image
-            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialThum02.jpg"
+            src="about/specialThum02.jpg"
             width={"558px"}
             height={"369px"}
             alt=""
@@ -78,7 +78,7 @@ const Special: NextPage = () => {
         </div>
         <div className="article-row">
           <Image
-            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/about/specialThum03.png"
+            src="about/specialThum03.png"
             width={"558px"}
             height={"369px"}
             alt=""

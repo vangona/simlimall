@@ -21,7 +21,7 @@ const Detail: NextPage = () => {
         <h4>SIMLIMALL BUSINESS</h4>
         <h2>심리몰 연구 및 개발의 3가지 STEP</h2>
         <Image
-          src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/business/stepImg.png"
+          src="business/stepImg.png"
           width={"641px"}
           height={"631px"}
           alt=""
@@ -82,7 +82,7 @@ const Detail: NextPage = () => {
           <div className="merit-description">
             <div className="icon">
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/business/bjIco01.png"
+                src="business/bjIco01.png"
                 alt=""
                 width={"47px"}
                 height={"43px"}
@@ -95,7 +95,7 @@ const Detail: NextPage = () => {
           <div className="merit-description">
             <div className="icon">
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/business/bjIco02.png"
+                src="business/bjIco02.png"
                 alt=""
                 width={"47px"}
                 height={"43px"}
@@ -107,9 +107,8 @@ const Detail: NextPage = () => {
           </div>
           <div className="merit-description">
             <div className="icon">
-              {" "}
               <Image
-                src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/business/bjIco03.png"
+                src="business/bjIco03.png"
                 alt=""
                 width={"47px"}
                 height={"43px"}

@@ -34,7 +34,7 @@ export default function NavBar() {
             <Link href="/">
               <a>
                 <Image
-                  src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/logo.png"
+                  src="logo-row.png"
                   width={"140px"}
                   height={"50px"}
                   quality={"100"}

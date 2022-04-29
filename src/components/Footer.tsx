@@ -12,12 +12,7 @@ export default function Footer() {
       <div className="top">COPYRIGHT (C) SIMLIMALL. ALL RIGHT RESERVED</div>
       <div className="bottom">
         <div className="bottom-left">
-          <Image
-            src="https://cdn.jsdelivr.net/gh/vangona/simlimall/src/img/logo-column.png"
-            width={"80px"}
-            height={"70px"}
-            alt=""
-          />
+          <Image src="logo-column.png" width={"80px"} height={"70px"} alt="" />
           <div className="description">
             <span>사업자번호 : 571-15-01205 / 대표 : 송형주</span>
             <span>대표전화 : 010-6684-2199</span>
