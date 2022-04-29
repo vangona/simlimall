@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta httpEquiv="Expires" content="60" />
           <meta
             name="google-site-verification"
             content="JYnLwVdz4iMwKKarFAZ6OlPVpPxe2WH2HFZaUgGTssY"
