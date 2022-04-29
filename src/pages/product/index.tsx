@@ -7,7 +7,10 @@ import Seo from "../../components/Seo";
 const Product: NextPage = () => {
   return (
     <SectionMainLayout>
-      <Seo title="제품 소개" />
+      <Seo
+        title="제품 소개"
+        description="수용전념치료 그림도구는 심리적 유연성을 증진시키지 위한 6가지 핵심과정을 담은 심리도구입니다. 수용, 탈융합, 현재에 존재하기, 맥락적 자기, 가치, 전념행동을 돕기 위한 비유를 그림을 통해 경험할 수 있습니다."
+      />
       <SectionHeaderLayout>
         <article className="header__article">
           <h2>제품 소개</h2>
@@ -15,8 +18,11 @@ const Product: NextPage = () => {
             <div className="hero-description">
               <div className="hero-line"></div>
               <h3>Simlimall Product</h3>
-              <div>심리몰을 만나고 &#39;행복&#39;을 배웠습니다.</div>
-              <p>고객님이 항상 웃을 수 있는 그 날까지 정성을 다하겠습니다.</p>
+              <div>심리몰의 제품은 &#39;행복&#39;을 위해 존재합니다.</div>
+              <p>
+                고객님이 웃을 수 있도록 성장하는 그 날까지 정성을 다해
+                만들겠습니다.
+              </p>
               <div className="hero-line"></div>
             </div>
             <div className="linebox"></div>
