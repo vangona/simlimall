@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simlimall 웹사이트
 
-## Getting Started
+# 1. 개요
 
-First, run the development server:
+여러 절차로 인해 기존 사이트의 수정이 어렵고, 몇 요소들이 반응형 웹에서 버그가 있어서 이를 수정하고자 개발함.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# 2. 기능 명세서
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1) 주된 사이트 개선 내용
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### ① 사이트 구조 경량화 (고객 문의 삭제)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- 판매는 다른 웹사이트를 이용할 예정이고, 간단한 랜딩용 웹사이트의 특성상 고객 문의를 주기적으로 확인하기 어려울 것이라 고려되어 고객 문의 페이지를 삭제하였음.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- 추가적으로 고객 문의를 삭제함으로써, DB 및 Backend 작업이 줄어들어서 사이트 비용 절감을 기대할 수 있음.
 
-## Learn More
+### ② 주요 행동 버튼 디자인 개선
 
-To learn more about Next.js, take a look at the following resources:
+- 이전 행동 버튼에는 별다른 상호작용이 발생하지 않아서, 구매 전환에 영향을 주지 못하고 있었음. 주요 행동 버튼을 구분하고 애니메이션을 추가하여 구매 전환율 증가 기대.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ③ favicon 추가
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- 사이트의 아이덴티티를 위해, favicon을 추가하였음.
 
-## Deploy on Vercel
+### ④ 반응형 디자인 개선
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 일부 오류가 있던 반응형 디자인을 개선하였음.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 2) 추후 개선 필요 사항
+
+- 스타트업의 특성상 한정되고 적은 자원, 낮은 리스크로 사이트가 동작할 수 있도록 구성하였기 때문에 추후 동시접속자 수가 1000명 이상이 될 경우에는 다른 배포 방식이 필요함.
+
+# 3. 사용 기술 스택
+
+### ① 주 언어 : Javascript
+
+### ② React + Nextjs
+
+- SEO을 위해서, 웹사이트 최적화 및 성능을 높이기 위해 React와 NextJs를 사용해서 개발함.
+
+### ③ Next-images
+
+- image 최적화를 위해 Next-images 사용. 이후 이미지 로딩 우선 순위를 높이는데에도 용이하게 사용되었음.
+
+### ④ Next-Seo
+
+- 처음에는 Head를 사용해서 구축했다가, 더 나은 SEO를 위해서 더 많은 정보를 효율적으로 담고자 Next-Seo를 사용했음.
+
+### ③ 버젼 관리 : Github
+
+- Github을 통해 버젼을 관리.
+
+### ④ 배포 : Github + Netlify
+
+- 방문 traffic이 적기 때문에 현재는 netlify로 충분히 동작이 가능하가도 판단됨.
