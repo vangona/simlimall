@@ -38,6 +38,7 @@ const Special: NextPage = () => {
                 height={"650px"}
                 layout="responsive"
                 objectFit="cover"
+                priority
               />
             </div>
           </div>
@@ -50,6 +51,7 @@ const Special: NextPage = () => {
             width={"558px"}
             height={"369px"}
             alt=""
+            priority
           />
           <div className="article-description">
             <div className="number--big">01</div>
@@ -68,6 +70,7 @@ const Special: NextPage = () => {
             width={"558px"}
             height={"369px"}
             alt=""
+            priority
           />
           <div className="article-description">
             <div className="number--big">02</div>
@@ -85,6 +88,7 @@ const Special: NextPage = () => {
             width={"558px"}
             height={"369px"}
             alt=""
+            priority
           />
           <div className="article-description">
             <div className="number--big">03</div>

@@ -34,6 +34,7 @@ const Product: NextPage = () => {
                 layout="responsive"
                 objectFit="cover"
                 alt=""
+                priority
               />
             </div>
           </div>
@@ -47,6 +48,7 @@ const Product: NextPage = () => {
               alt=""
               width={"590px"}
               height={"380px"}
+              priority
             />{" "}
           </div>
           <div className="article-description">
@@ -68,6 +70,7 @@ const Product: NextPage = () => {
               alt=""
               width={"590px"}
               height={"380px"}
+              priority
             />
           </div>
           <div className="article-description">
@@ -87,6 +90,7 @@ const Product: NextPage = () => {
               alt=""
               width={"590px"}
               height={"380px"}
+              priority
             />{" "}
           </div>
           <div className="article-description">
@@ -108,6 +112,7 @@ const Product: NextPage = () => {
               alt=""
               width={"590px"}
               height={"380px"}
+              priority
             />{" "}
           </div>
           <div className="article-description">

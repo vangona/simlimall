@@ -28,6 +28,7 @@ const Detail: NextPage = () => {
           width={"641px"}
           height={"631px"}
           alt=""
+          priority
         />
         <hr />
         <div className="table">
@@ -89,6 +90,7 @@ const Detail: NextPage = () => {
                 alt=""
                 width={"47px"}
                 height={"43px"}
+                priority
               />
             </div>
             <h5>01</h5>
@@ -102,6 +104,7 @@ const Detail: NextPage = () => {
                 alt=""
                 width={"47px"}
                 height={"43px"}
+                priority
               />
             </div>
             <h5>02</h5>
@@ -115,6 +118,7 @@ const Detail: NextPage = () => {
                 alt=""
                 width={"47px"}
                 height={"43px"}
+                priority
               />
             </div>
             <h5>02</h5>

@@ -32,6 +32,7 @@ const Business: NextPage = () => {
                 height={"650px"}
                 layout="responsive"
                 objectFit="cover"
+                priority
               />
             </div>
           </div>

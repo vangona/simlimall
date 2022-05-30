@@ -51,6 +51,7 @@ const Greeting: NextPage = () => {
             alt=""
             width={"1803px"}
             height={"650px"}
+            priority
           />
         </div>
       </article>

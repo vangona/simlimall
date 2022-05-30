@@ -31,6 +31,7 @@ const Promise: NextPage = () => {
                 layout="responsive"
                 objectFit="cover"
                 alt=""
+                priority
               />
             </div>
           </div>
@@ -49,6 +50,7 @@ const Promise: NextPage = () => {
               height={"275px"}
               layout="responsive"
               alt=""
+              priority
             />
           </div>
         </article>

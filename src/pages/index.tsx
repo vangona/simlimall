@@ -9,7 +9,7 @@ const Greeting: NextPage = () => {
     <SectionMainLayout>
       <Seo
         title="홈"
-        description="Simlimall은 심리학 전문가들과 함께 합니다. 과학적이고 전문적인 지식, 윤리적 기준, 현장의 전문적 인 경험을 바탕으로 신뢰할 수 있는 학문적인 서비스를 제공하겠습니다."
+        description="Simlimall은 과학적이고 전문적인 지식, 윤리적 기준, 현장의 전문적 인 경험을 바탕으로 신뢰할 수 있는 학문적인 서비스를 제공하겠습니다."
       />
       <AboutHeader>
         <article className="header__article header--about">
@@ -51,6 +51,7 @@ const Greeting: NextPage = () => {
             alt=""
             width={"1803px"}
             height={"650px"}
+            priority
           />
         </div>
       </article>

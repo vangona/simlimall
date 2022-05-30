@@ -39,6 +39,7 @@ export default function NavBar() {
                   height={"50px"}
                   quality={"100"}
                   alt=""
+                  priority
                 />
               </a>
             </Link>
