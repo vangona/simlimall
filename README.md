@@ -32,7 +32,7 @@
 
 # 3. 사용 기술 스택
 
-### ① 주 언어 : Javascript
+### ① 주 언어 : Typescript
 
 ### ② React + Nextjs
 
@@ -50,6 +50,6 @@
 
 - Github을 통해 버젼을 관리.
 
-### ④ 배포 : Github + Netlify
+### ④ 배포 : Github + Vercel
 
-- 방문 traffic이 적기 때문에 현재는 netlify로 충분히 동작이 가능하가도 판단됨.
+- Netlify로 배포하였었으나, 성능 이슈로 인해 vercel로 변경함.
