@@ -20,8 +20,8 @@ export default function Footer() {
             priority
           />
           <div className="description">
-            <span>사업자번호 : 571-15-01205 / 대표 : 송형주</span>
-            <span>대표전화 : 010-6684-2199</span>
+            <span>사업자번호 : 436-73-00329 / 대표 : 임소희</span>
+            <span>대표전화 : 010-4196-0090</span>
           </div>
         </div>
         <div className="bottom-center"></div>
